@@ -1,0 +1,204 @@
+/* Start Variables */
+:root {
+    --marine-blue: hsl(213, 96%, 18%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --light-blue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
+    --cool-gray: hsl(231, 11%, 63%);
+    --light-gray: hsl(229, 24%, 87%);
+    --magnolia: hsl(217, 100%, 97%);
+    --alabaster: hsl(231, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+}
+/* End Variables */
+/* Start Global Rules */
+    * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--magnolia);
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+.content{
+    background-color: var(--white);
+    min-height: 300px;
+    margin-top: 65px;
+    display: flex;
+    border-radius: 15px;
+}
+@media (max-width:700px) {
+    .content{
+        flex-direction: column;
+        background-color: var(--magnolia);
+        position: relative !important;
+        min-height: 628px;
+    }
+}
+.sidebar{
+    min-width: 250px;
+    min-height: 500px;
+    background-color: var(--purplish-blue);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-image: url(../assets/images/bg-sidebar-desktop.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+@media (max-width:700px) {
+    .sidebar{
+        background-image: url(../assets/images/bg-sidebar-mobile.svg);
+        min-height: 172px;
+        background-size: 100%;
+        margin: 0;
+    }
+}
+.sidebar ul li{
+    display: flex;
+    font-size: 13px;
+    margin: 20px 0;
+    align-items: center;
+}
+@media (max-width:700px) {
+    .sidebar ul{
+        display: flex;
+        justify-content: center;
+    }
+}
+.sidebar ul .active .number{
+    background-color: var(--magnolia);
+    color: var(--marine-blue);
+    border-color: var(--magnolia);
+}
+.sidebar ul li .number{
+    border: 1px solid;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-weight: 500;
+}
+.sidebar ul li .text{
+    margin-left: 20px;
+}
+@media (max-width:700px) {
+    .sidebar ul li{
+        margin: 0 10px;
+    }
+    .sidebar ul li .text{
+        display: none;
+    }
+}
+.sidebar ul li .text h3{
+    color: var(--light-gray);
+    font-size: 13px;
+    font-weight: 300;
+}
+.sidebar ul li .text p{
+    color: var(--white);
+    font-size: 18px;
+    font-weight: bold;
+}
+.page{
+    margin: 20px;
+    margin-left: 51px !important;
+    padding-top: 40px;
+    position: relative;
+    flex: 1;
+    margin-right: 100px;
+}
+@media (max-width:700px) {
+    .page{
+        background-color: var(--white);
+        padding: 20px 20px 100px;
+        border-radius: 10px;
+        margin: -100px auto 0 !important;
+        width: 90%;
+    }
+}
+.page h2{
+    font-size: 30px;
+    color: var(--marine-blue);
+    margin-bottom: 10px;
+}
+.page > p:nth-of-type(1){
+    color: var(--cool-gray);
+    font-size: 18px;
+}
+.page > .next{
+    width: 100px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--marine-blue);
+    color: var(--white);
+    border-radius: 8px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: bold;
+}
+.page > .previous{
+    width: 100px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--marine-blue);
+    border-radius: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: bold;
+}
+@media (max-width: 700px) {
+    .page > .next,
+    .page > .previous{
+        margin: 0px 20px 25px 0;
+    }
+}

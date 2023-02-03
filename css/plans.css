@@ -1,0 +1,125 @@
+.plans #error-radio{
+    margin-top: auto; 
+    text-align: center;
+    color: var(--strawberry-red);
+    transform: translateY(40px);
+    font-weight: 700;
+    display: none;
+}
+.plans form{
+    display: flex;
+    margin-top: 50px;
+}
+@media (max-width:992px) {
+    .plans form{
+        flex-direction: column;
+        margin-top: 15px;
+    }
+}
+.plans form > div{
+    margin: 0 10px;
+    flex: 1;
+}
+.plans form > div > input{
+    display: none;
+}
+.plans form > div > label{
+    cursor: pointer;
+    padding: 16px;
+    display: block;
+    border: 1px solid var(--cool-gray);
+    border-radius: 10px;
+    width: 135px;
+}
+@media (max-width:992px ) {
+    .plans form > div > label{
+        width: 100%;
+        margin: 10px 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.plans form > div > input:checked + label{
+    background-color: var(--magnolia);
+}
+.plans form > div > label:hover{
+    border-color: var(--purplish-blue)
+}
+.plans form > div > label > img{
+    margin-bottom: 20px;
+}
+@media (max-width:992px ) {
+    .plans form > div > label > img{
+        margin-bottom: 5px;
+        margin-right: 30px;
+    }
+}
+.plans form > div > label > .text .type{
+    margin-bottom: 7px;
+    color: var(--marine-blue);
+    font-weight: 700;
+}
+.plans form > div > label > .text span:nth-of-type(1){
+    color: var(--cool-gray);
+    display: block;
+}   
+.plans form > div > label > .text span:nth-of-type(2){
+    display: none;
+    color: var(--cool-gray);
+}
+.plans form > div > label > .text .free{
+    text-align: center;
+    display: none;
+    color: var(--marine-blue);
+    margin-top: 5px;
+}
+.plans .check-type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--magnolia);
+    padding: 15px;
+    gap: 25px;
+    margin: 20px 15px 0;
+    border-radius: 10px;
+}
+@media (max-width:992px) {
+    .plans .check-type{
+        margin: 20px 15px 60px;
+    }
+}
+.plans .check-type p:nth-of-type(1){
+    color: var(--marine-blue);
+}
+.plans .check-type p{
+    display: block;
+    font-weight: 700;
+    color: var(--cool-gray);
+}
+.plans .check-type .plan-check{
+    display: none;
+}
+.plans .check-type .plan-check + label{
+    width: 50px;
+    height: 20px;
+    display: block;
+    background-color: var(--marine-blue);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.plans .check-type .plan-check + label::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--white);
+    border-radius: 50%;
+    transition: left .5s;
+}
+.plans .check-type .plan-check:checked + label::before{
+    left: 30px;
+}

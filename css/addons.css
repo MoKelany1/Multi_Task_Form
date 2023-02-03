@@ -1,0 +1,68 @@
+.addons form{
+    margin-top: 50px;
+}
+.addons form > div{
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.addons form > div:hover{
+    border: 1px solid var(--purplish-blue);
+}
+.addons form > div > input{
+    display: none;
+}
+.addons form > div > label{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid var(--light-blue);
+    border-radius: 5px;
+}
+.addons form > div > input:checked + label{
+    border: 1px solid var(--purplish-blue);
+}
+.addons form > div > label{
+    width: 100%;
+}
+.addons form > div > label .check{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+.addons form > div > label .check span{
+    background-color: var(--purplish-blue);
+    width: 0;
+    height: 0;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addons form > div > input:checked + label .check span{
+    width: 20px;
+    height: 20px;
+}
+.addons form > div > label .check span i{
+    color: white;
+}
+.addons form > div > label .text h3{
+    color: var(--marine-blue);
+    font-size: 18px !important;
+    margin-bottom: 5px;
+}
+.addons form > div > label .text p{
+    color: var(--cool-gray);
+}
+.addons form > div > label .price{
+    margin-left: auto;
+}
+.addons form > div > label .price span{
+    display: block;
+    color: var(--purplish-blue);
+    font-weight: 700;
+    font-size: 13px;
+}

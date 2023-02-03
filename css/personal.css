@@ -1,0 +1,29 @@
+.personal-info form{
+    margin-top: 50px;
+}
+.personal-info form div label{
+    display: block;
+    margin-bottom: 5px;
+    color: var(--marine-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.personal-info form div label p{
+    color: var(--strawberry-red);
+    font-size: 14px;
+    display: none;
+}
+.personal-info form div input{
+    display: block;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid var(--cool-gray);
+    border-radius: 5px;
+}
+.personal-info form div input:focus{
+    outline: none;
+    border-color: var(--marine-blue);
+    color: var(--marine-blue);
+}

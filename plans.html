@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/plans.css">
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="sidebar">
+      <ul>
+        <li class="">
+          <div class="number">1</div>
+          <div class="text">
+            <h3>STEP 1</h3>
+            <p>YOUR INFO</p>
+          </div>
+        </li>
+        <li class="active">
+          <div class="number">2</div>
+          <div class="text">
+            <h3>STEP 2</h3>
+            <p>SELECT PLAN</p>
+          </div>
+        </li>
+        <li class="">
+          <div class="number">3</div>
+          <div class="text">
+            <h3>STEP 3</h3>
+            <p>ADD-ONS</p>
+          </div>
+        </li>
+        <li class="">
+          <div class="number">4</div>
+          <div class="text">
+            <h3>STEP 4</h3>
+            <p>SUMMARY</p>
+          </div>
+        </li>
+      </ul>
+      </div>
+      <div class="plans page">
+        <h2>Select your plan</h2>
+        <p>You have the option of monthly and yearly billing.</p>
+        <p id="error-radio">Please choose your plan</p>
+        <form action="">
+            <div class="arcade">
+                <input type="radio" name="plan" value="arcade" id="arcade-radio">
+                <label for="arcade-radio">
+                    <img src="assets/images/icon-arcade.svg" alt="">
+                    <div class="text">
+                      <p class="type">Arcade</p>
+                      <span class="span-month" id="arcade-month-price">$9/mo</span>
+                      <span class="span-year" id="arcade-year-price">$90/yr</span>
+                      <p class="free">2 months free</p>
+                    </div>
+                </label>
+            </div>
+            <div class="advanced">
+                <input type="radio" name="plan" value="advanced" id="advanced-radio">
+                <label for="advanced-radio">
+                    <img src="assets/images/icon-advanced.svg" alt="">
+                    <div class="text">
+                      <p class="type">Advanced</p>
+                      <span class="span-month" id="advanced-month-price">$12/mo</span>
+                      <span class="span-year" id="arcade-year-price">$120/yr</span>
+                      <p class="free">2 months free</p>
+                    </div>
+                </label>
+            </div>
+            <div class="pro">
+                <input type="radio" name="plan" value="pro" id="pro-radio">
+                <label for="pro-radio">
+                    <img src="assets/images/icon-pro.svg" alt="">
+                    <div class="text">
+                      <p class="type">Pro</p>
+                      <span class="span-month" id="pro-month-price">$15/mo</span>
+                      <span class="span-year" id="pro-year-price">$150/mo</span>
+                      <p class="free">2 months free</p>
+                    </div>
+                </label>
+            </div>
+        </form>
+        <div class="check-type">
+            <p id="monthly-p">Monthly</p>
+            <input type="checkbox" id="plan-type" class="plan-check">
+            <label for="plan-type" id="plan-type-label"></label>
+            <p id="yearly-p">Yearly</p>
+        </div>
+        <a id="plans-next" class="next" href="addons.html">Next Page</a>
+        <a class="previous" href="index.html">Go Back</a>
+      </div>
+    </div>
+  </div>
+  <script src="js/plans.js"></script>
+</body>
+</html>

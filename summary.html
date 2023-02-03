@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/summary.css">
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="sidebar">
+      <ul>
+        <li class="">
+          <div class="number">1</div>
+          <div class="text">
+            <h3>STEP 1</h3>
+            <p>YOUR INFO</p>
+          </div>
+        </li>
+        <li class="">
+          <div class="number">2</div>
+          <div class="text">
+            <h3>STEP 2</h3>
+            <p>SELECT PLAN</p>
+          </div>
+        </li>
+        <li class="">
+          <div class="number">3</div>
+          <div class="text">
+            <h3>STEP 3</h3>
+            <p>ADD-ONS</p>
+          </div>
+        </li>
+        <li class="active">
+          <div class="number">4</div>
+          <div class="text">
+            <h3>STEP 4</h3>
+            <p>SUMMARY</p>
+          </div>
+        </li>
+      </ul>
+      </div>
+      <div class="summary page">
+        <h2>Finishing up</h2>
+        <p>Double-check everything looks OK before confirming</p>
+        <div class="finish">
+          <div class="type">
+            <div class="text">
+              <h3 id="plan-type" >Arcade (Monthly)</h3>
+              <a href="plans.html" id="change">change</a>
+            </div>
+            <div id="plan-price" class="price">0$/mo</div>
+          </div>
+          <ul class="addons">
+            <li class="service">Online service <span id="service-span" class="price">0$/mo</span></li>
+            <li class="storage">Larger storage <span id="storage-span" class="price">0$/mo</span></li>
+            <li class="profile">Customized profile <span id="profile-span" class="price">0$/mo</span></li>
+          </ul>
+        </div>
+        <div class="total">
+          <p id="total-type">Total <span id="selection">(per month)</span></p>
+          <span id="total-price" class="total-price">0$/mo</span>
+        </div>
+        <div id="thank-page" class="thank">
+          <img src="assets/images/icon-thank-you.svg" alt="">
+          <h3>Thank You</h3>
+          <p>Thank you for confirming your subscription! We hope you have fun using our platform. if you ever need support, please feel free to email us at support@loregaming.com </p>
+        </div>
+        <button id="summary-confirm" class="next">Confrim</button>
+        <a class="previous" href="addons.html">Go Back</a>
+      </div>
+    </div>
+  </div>
+  <script src="js/summary.js"></script>
+</body>
+</html>
